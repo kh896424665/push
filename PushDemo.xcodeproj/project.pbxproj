@@ -36,7 +36,7 @@
 /* Begin PBXFileReference section */
 		67407AD42C8DFF8400C2BFE4 /* PushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67407AD72C8DFF8400C2BFE4 /* PushDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDemoApp.swift; sourceTree = "<group>"; };
-		67407AD92C8DFF8400C2BFE4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		67407AD92C8DFF8400C2BFE4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		67407ADB2C8DFF8600C2BFE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67407ADE2C8DFF8600C2BFE4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		67407AE42C8DFF8600C2BFE4 /* PushDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
