@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		671047662C9972220040B812 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671047652C9972220040B812 /* NotificationManager.swift */; };
+		671047682C99727A0040B812 /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671047672C99727A0040B812 /* NotificationsView.swift */; };
 		67407AD82C8DFF8400C2BFE4 /* PushDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67407AD72C8DFF8400C2BFE4 /* PushDemoApp.swift */; };
 		67407ADA2C8DFF8400C2BFE4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67407AD92C8DFF8400C2BFE4 /* ContentView.swift */; };
 		67407ADC2C8DFF8600C2BFE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67407ADB2C8DFF8600C2BFE4 /* Assets.xcassets */; };
@@ -34,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		671047652C9972220040B812 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		671047672C99727A0040B812 /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
 		67407AD42C8DFF8400C2BFE4 /* PushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		67407AD72C8DFF8400C2BFE4 /* PushDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDemoApp.swift; sourceTree = "<group>"; };
 		67407AD92C8DFF8400C2BFE4 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,8 @@
 		67407AEE2C8DFF8700C2BFE4 /* PushDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PushDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		67407AF22C8DFF8700C2BFE4 /* PushDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDemoUITests.swift; sourceTree = "<group>"; };
 		67407AF42C8DFF8700C2BFE4 /* PushDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6763E27F2C99206A00E587FD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		6763E2802C993BD200E587FD /* PushDemoDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushDemoDebug.entitlements; sourceTree = "<group>"; };
 		67D6E34A2C909B0A00D88C98 /* PushDemo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PushDemo.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,6 +101,10 @@
 		67407AD62C8DFF8400C2BFE4 /* PushDemo */ = {
 			isa = PBXGroup;
 			children = (
+				671047672C99727A0040B812 /* NotificationsView.swift */,
+				671047652C9972220040B812 /* NotificationManager.swift */,
+				6763E2802C993BD200E587FD /* PushDemoDebug.entitlements */,
+				6763E27F2C99206A00E587FD /* Info.plist */,
 				67D6E34A2C909B0A00D88C98 /* PushDemo.entitlements */,
 				67407AD72C8DFF8400C2BFE4 /* PushDemoApp.swift */,
 				67407AD92C8DFF8400C2BFE4 /* ContentView.swift */,
@@ -259,8 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				671047662C9972220040B812 /* NotificationManager.swift in Sources */,
 				67407ADA2C8DFF8400C2BFE4 /* ContentView.swift in Sources */,
 				67407AD82C8DFF8400C2BFE4 /* PushDemoApp.swift in Sources */,
+				671047682C99727A0040B812 /* NotificationsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,7 +361,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -406,7 +418,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.3;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -421,13 +433,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = PushDemo/PushDemo.entitlements;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_ENTITLEMENTS = PushDemo/PushDemoDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PushDemo/Preview Content\"";
-				DEVELOPMENT_TEAM = 2PFW2H629T;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = XSK5H76TPY;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PushDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -439,8 +455,10 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.push.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neicex7540.sign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = 8fe89b35995760558cbe17c71a4a034a6f629ab263;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = 8fe89b35995760558cbe17c71a4a034a6f629ab263;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -453,12 +471,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = PushDemo/PushDemo.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PushDemo/Preview Content\"";
 				DEVELOPMENT_TEAM = 2PFW2H629T;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PushDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -470,8 +490,9 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.push.test;
+				PRODUCT_BUNDLE_IDENTIFIER = com.neicex7540.sign;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -560,7 +581,7 @@
 				67407AF72C8DFF8700C2BFE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		67407AF82C8DFF8700C2BFE4 /* Build configuration list for PBXNativeTarget "PushDemo" */ = {
 			isa = XCConfigurationList;
@@ -569,7 +590,7 @@
 				67407AFA2C8DFF8700C2BFE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		67407AFB2C8DFF8700C2BFE4 /* Build configuration list for PBXNativeTarget "PushDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -578,7 +599,7 @@
 				67407AFD2C8DFF8700C2BFE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		67407AFE2C8DFF8700C2BFE4 /* Build configuration list for PBXNativeTarget "PushDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -587,7 +608,7 @@
 				67407B002C8DFF8700C2BFE4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

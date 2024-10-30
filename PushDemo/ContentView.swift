@@ -22,23 +22,26 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Spacer()
             Text("\(title)")
                 .font(.system(size: 30))
                    .padding()
-            Spacer()
-            Button("发送本地通知"){
+            
+            Button("发送本地通知(延时5秒)"){
                 sendNotification()
             }.padding()
                 .background(.blue)
                 .foregroundColor(.white)
                 .cornerRadius(40)
-            Spacer()
+            
+        
         }
         .padding()
         
     }
     
+    /**
+        请求通知权限，并发送通知
+     */
     func sendNotification() {
             // 请求权限
             UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge]) { granted, error in
@@ -48,16 +51,21 @@ struct ContentView: View {
         }
 
     
+    /**
+     延时5秒发送一个本地通知
+     */
     func scheduleNotification() {
         let content = UNMutableNotificationContent()
-        content.title = "本地通知"
-        content.body = "这是一条本地通知"
+        content.title = "这是主标题"
+        content.subtitle = "这是副标题"
+        content.body = "这是一条本地通知内容"
+        content.badge = 2
         content.sound = UNNotificationSound.default
         
-        // 立即发送通知，不需要触发器
-        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: nil)
+        //一个触发器，5秒后弹出通知，点击弹出后需要将应用退出后台，前台无法弹出通知
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
         print("发送本地通知")
-//        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
         // 添加通知请求
         UNUserNotificationCenter.current().add(request) { (error : Error?) in
                   if let theError = error {
@@ -69,6 +77,10 @@ struct ContentView: View {
                   }
        }
     }
+    
+
+    
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
