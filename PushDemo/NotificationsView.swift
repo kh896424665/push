@@ -14,7 +14,7 @@ struct NotificationsView: View {
     @StateObject var notificationManager: NotificationManager
     @State private var notificationTitle : String = "APNS通知标题"
     @State private var notificationSubtitle : String = "APNS通知副标题"
-    @State private var log : String = "日志区域"
+    @State private var log : String = "log"
     let systemVersion = UIDevice.current.systemVersion
     let currentDevice = UIDevice.current.localizedModel
     private var canSendNotif: Bool {
@@ -29,7 +29,7 @@ struct NotificationsView: View {
             
             VStack(spacing: 10) {
                 VStack(alignment: .center) {
-                    Text("\(log)")
+                    Text("日志:" + log)
                         .foregroundColor(.red)
                 }
                 Button("发送本地通知(延时5秒)"){
@@ -41,16 +41,47 @@ struct NotificationsView: View {
                     .cornerRadius(40)
                 
                 Button("判断是否安装了微信"){
-                    sendNotification()
-                    log = "是否安装了微信："
+                    if isAppInstalled(scheme: "weixin://") {
+                        log = "是否安装了微信：是"
+                    } else {
+                        log = "是否安装了微信：否"
+                    }
+                        
+                }.padding()
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(40)
+                
+                Button("判断是否安装了淘宝"){
+                    if isAppInstalled(scheme: "taobao://") {
+                        log = "是否安装了淘宝：是"
+                    } else {
+                        log = "是否安装了淘宝：否"
+                    }
+                        
+                }.padding()
+                    .background(.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(40)
+                
+                Button("判断是否安装了微博"){
+                    if isAppInstalled(scheme: "sinaweibo://") {
+                        log = "是否安装了微博：是"
+                    } else {
+                        log = "是否安装了微博：否"
+                    }
+                        
                 }.padding()
                     .background(.blue)
                     .foregroundColor(.white)
                     .cornerRadius(40)
                 
                 Button("判断是否安装了抖音"){
-                    sendNotification()
-                    log = "是否安装抖音："
+                    if isAppInstalled(scheme: "douyinOpenCard://") {
+                        log = "是否安装了抖音：是"
+                    } else {
+                        log = "是否安装了抖音：否"
+                    }
                 }.padding()
                     .background(.blue)
                     .foregroundColor(.white)
@@ -170,7 +201,15 @@ struct NotificationsView: View {
                 guard granted else { return }
                 self.scheduleNotification()
             }
+    }
+    
+    ///检测应用是否被安装
+    func isAppInstalled(scheme: String) -> Bool {
+        if let url = URL(string: scheme) {
+            return UIApplication.shared.canOpenURL(url)
         }
+        return false
+    }
 
     
     /**
